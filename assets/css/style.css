@@ -1,0 +1,189 @@
+.notes-sect {
+	background-color: #8675B6;
+}
+
+.notes-container {
+	max-width: 1000px;
+	min-height: calc(100vh - 30px); /*vh - viewport height*/
+	margin: 0 auto;
+	padding: 15px;
+	background-color: #fff;
+}
+
+.tab-item {
+	display: inline-block;
+	padding: 10px;
+	border: 1px solid #1DA7FF;
+	border-radius: 5px;
+	cursor: pointer;
+	color: #1DA7FF;
+	user-select: none;
+	font: 400 18px 'Exo 2', sans-serif;
+}
+
+.notes-sect .tab-item:hover {
+	color: #fff;
+	background-color: #61B7EC;
+	border-color: #61B7EC;
+}
+
+.tabs-body {
+	padding: 10px 0;
+}
+
+.tab-content {
+	display: none;
+}
+
+.tab-active {
+	color: #fff;
+	background-color: #1DA7FF;
+}
+
+.notes-sect .plus-item {
+	color: #1DA7FF;
+	border: 1px solid #1DA7FF;
+	display: inline-block;
+	border-radius: 40%;
+	padding: 6px 7px;
+	font-size: 22px;
+	cursor: pointer;
+	user-select: none;
+	position: absolute;
+}
+
+.notes-sect .plus-item:hover {
+	color: #fff;
+	background-color: #1DA7FF;
+	border-color: #1DA7FF;
+}
+
+.notes-sect .new-task {
+	width: 30%;
+	max-width: 400px;
+	padding: 20px;
+	border-radius: 5px;
+	background-color: #8675B6;
+	font-size: 0;
+	clear: both;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.notes-sect .active {
+	display: block;
+}
+
+.notes-sect .new-task label {
+	display: block;
+}
+
+.notes-sect .new-task label.task-button {
+	display: inline-block;
+	width: 49%;
+	box-sizing: border-box;
+}
+
+.notes-sect .new-task label.task-button:last-of-type {
+	float: right;
+}
+
+.notes-sect .new-task input {
+	width: 100%;
+	box-sizing: border-box;
+	overflow: auto;
+	border: 2px solid transparent;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	background-color: #fff;
+}
+
+.notes-sect .new-task label.task-button input {
+	padding: 3px 0;
+	cursor: pointer;
+	font: 500 18px 'Exo 2', sans-serif;
+	color: #8675B6;
+}
+
+.notes-sect .new-task label.task-button input:hover {
+	border: 2px solid #fff;
+	background-color: #8675B6;
+	color: #fff;
+}
+
+.notes-sect .new-task textarea {
+	resize: none;
+	box-sizing: border-box;
+	width: 100%;
+	height: 150px;
+	overflow: auto;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+
+.locker {
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.notes-sect .task-list li {
+	width: 50%;
+	margin: 0 auto;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: #F0F0F0;
+}
+
+.notes-sect .task-list table {
+	color: #fff;
+	padding: 8px;
+	margin-bottom: 8px;
+	width: 100%;
+}
+
+.notes-sect .task-list table td {
+	font: 400 18px 'Exo 2', sans-serif;
+	background-color: #1DA7FF;
+	border: 1px solid #F0F0F0;
+	border-radius: 5px;
+	padding: 3px 6px;
+}
+
+.notes-sect .task-list button {
+	width: 33.3%;
+	font: 400 18px 'Exo 2', sans-serif;
+	border: 1px solid #F0F0F0;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #1DA7FF;
+	cursor: pointer;
+	user-select: none;
+	outline: none;
+}
+
+.notes-sect .tab-done .task-list button.done {
+	cursor: default;
+	opacity: 0.1;
+}
+
+.notes-sect .tab-removed .task-list button:not(.edit-restore) {
+	cursor: default;
+	opacity: 0.1;
+}
+
+
+.notes-sect .task-list table tr:first-child td {
+	font-weight: 700;
+}
