@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>myNote</title>
+    <title>todo</title>
     <script type="text/javascript" src="assets/script/jquery_3.3.1.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic" rel="stylesheet">
@@ -23,7 +23,10 @@
                 <div class="tabs-body">
                     <div class="tab-content tab-current active">
 	                        <div class="plus-item">
-	                            <i class="fas fa-plus"></i>
+                                <div class="add-text">Add</div>
+                                <div class="add-icon">
+	                               <i class="fas fa-plus"></i>
+                                </div>
 	                        </div>
                         <ol class="task-list"></ol>
                     </div>
@@ -35,7 +38,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Папой формы вставить div с фиксом: w:100%, h:100%, pos: fixed, opacity: 0.5 -->
             <div class="locker">
 	            <form class="new-task">
 	                <label>

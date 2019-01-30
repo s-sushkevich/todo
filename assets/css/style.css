@@ -4,7 +4,7 @@
 
 .notes-container {
 	max-width: 1000px;
-	min-height: calc(100vh - 30px); /*vh - viewport height*/
+	min-height: calc(100vh - 30px);
 	margin: 0 auto;
 	padding: 15px;
 	background-color: #fff;
@@ -41,18 +41,29 @@
 }
 
 .notes-sect .plus-item {
-	color: #1DA7FF;
-	border: 1px solid #1DA7FF;
 	display: inline-block;
-	border-radius: 40%;
-	padding: 6px 7px;
-	font-size: 22px;
 	cursor: pointer;
 	user-select: none;
 	position: absolute;
 }
 
-.notes-sect .plus-item:hover {
+.notes-sect .plus-item .add-icon {
+	border-radius: 40%;
+	padding: 6px 7px;
+	font-size: 22px;
+	color: #1DA7FF;
+	border: 1px solid #1DA7FF;
+	display: inline-block;
+}
+
+.notes-sect .plus-item .add-text {
+	display: inline-block;
+	color: #1DA7FF;
+	font: 400 23px 'Exo 2', sans-serif;
+	vertical-align: bottom;
+}
+
+.notes-sect .plus-item:hover .add-icon {
 	color: #fff;
 	background-color: #1DA7FF;
 	border-color: #1DA7FF;

@@ -79,7 +79,7 @@ function manageTask() {
         })
     }
 
-    function removeTask() { // Изменить её чтобы работала и в tab-done
+    function removeTask() {
         $(document).on('click', '.tab-content:not(.tab-removed) li button.delete', function() {
             var targetItem = $(this.closest('li'));
 
@@ -113,12 +113,12 @@ function manageTask() {
         var itemActive;
 
         $(document).on('click', '.tab-content:not(.tab-removed) li button.edit-restore', function() {
-            index = $(this).closest('.tab-content').find('li').index($(this).closest('li')); // Уточнить, можно ли как-то упростить эту длинную надпись
+            index = $(this).closest('.tab-content').find('li').index($(this).closest('li'));
             itemActive =
 
                 locker.addClass('active locker-edit');
 
-            if ($('.notes-sect .tab-current').hasClass('active')) { // Переделать как с OK кнопкой
+            if ($('.notes-sect .tab-current').hasClass('active')) {
 
                 locker.find('.new-task label:first-of-type input').val(tasksCurrent[index].name);
                 locker.find('.new-task textarea').val(tasksCurrent[index].description);
@@ -174,7 +174,7 @@ function manageTask() {
 
     }
 
-    function restoreTask() { // Для вкладки Removed tasks
+    function restoreTask() {
         $(document).on('click', '.tab-removed li button.edit-restore', function() {
             var index = $('.tab-removed li button.edit-restore').index(this);
             var targetItem = $(this.closest('li'));
