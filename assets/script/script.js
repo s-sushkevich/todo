@@ -8,11 +8,11 @@ function clearForm() {
 }
 
 function addNewTask() {
-    $('.plus-item').on('click', function() { // Клик на плюсик
+    $('.plus-item').on('click', function() {
         $('.notes-sect .locker').addClass('active locker-new');
     });
 
-    $(document).on('click', '.notes-sect .locker-new .new-task label.cancel-button', function() { // Клик на cancel
+    $(document).on('click', '.notes-sect .locker-new .new-task label.cancel-button', function() {
         $('.notes-sect .locker').removeClass('active locker-new');
 
         clearForm();
@@ -156,7 +156,7 @@ function manageTask() {
 
                 targetItem.html('<table><tr><td>' + tasksDone[index].name + '</td></tr><tr><td>' + tasksDone[index].description + '</td></tr></table>' + '<button class="task-list-butt done">Done</button>' + '<button class="task-list-butt delete">Delete</button>' + '<button class="task-list-butt edit-restore">Edit</button>');
 
-                if (tasksDone[index].description == '') { // Скрывает поле описания если оно пустое
+                if (tasksDone[index].description == '') {
                     targetItem.find('tr:last-child').remove();
                 }
             }
@@ -204,33 +204,33 @@ function useLocalStorage() {
         tasksDone = JSON.parse(localStorage.getItem('tasksDoneLocal'));
         tasksRemoved = JSON.parse(localStorage.getItem('tasksRemovedLocal'));
 
-        for (let i = 0; i < tasksCurrent.length; i++) { // Создание таблицы для текущих
+        for (let i = 0; i < tasksCurrent.length; i++) {
             let taskList = document.querySelector('.notes-sect .tab-current .task-list');
 
             taskList.innerHTML += `<li><table><tr class="name"><td>${tasksCurrent[i].name}</td></tr><tr class="description"><td>${tasksCurrent[i].description}</td></tr></table><button class="task-list-butt done">Done</button><button class="task-list-butt delete">Delete</button><button class="task-list-butt edit-restore">Edit</button></li>`;
 
-            if (tasksCurrent[i].description == '') { // Скрывает поле описания если оно пустое
+            if (tasksCurrent[i].description == '') {
                 document.querySelector('.notes-sect .tab-current li:last-child tr:last-child').remove();
             }
         }
 
-        for (let i = 0; i < tasksDone.length; i++) { // Создание таблицы для выполненных
+        for (let i = 0; i < tasksDone.length; i++) {
             let taskList = document.querySelector('.notes-sect .tab-done .task-list');
 
             taskList.innerHTML += `<li><table><tr class="name"><td>${tasksDone[i].name}</td></tr><tr class="description"><td>${tasksDone[i].description}</td></tr></table><button class="task-list-butt done">Done</button><button class="task-list-butt delete">Delete</button><button class="task-list-butt edit-restore">Edit</button></li>`;
 
-            if (tasksDone[i].description == '') { // Скрывает поле описания если оно пустое
+            if (tasksDone[i].description == '') {
                 document.querySelector('.notes-sect .tab-done li:last-child tr:last-child').remove();
             }
 
         }
 
-        for (let i = 0; i < tasksRemoved.length; i++) { // Создание таблицы для удалённых
+        for (let i = 0; i < tasksRemoved.length; i++) {
             let taskList = document.querySelector('.notes-sect .tab-removed .task-list');
 
             taskList.innerHTML += `<li><table><tr class="name"><td>${tasksRemoved[i].name}</td></tr><tr class="description"><td>${tasksRemoved[i].description}</td></tr></table><button class="task-list-butt done">Done</button><button class="task-list-butt delete">Delete</button><button class="task-list-butt edit-restore">Edit</button></li>`;
 
-            if (tasksRemoved[i].description == '') { // Скрывает поле описания если оно пустое
+            if (tasksRemoved[i].description == '') {
                 document.querySelector('.notes-sect .tab-removed li:last-child tr:last-child').remove();
             }
 
